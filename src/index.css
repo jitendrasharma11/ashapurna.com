@@ -1,0 +1,292 @@
+/* Header css start */
+
+.btn-color {
+    background: rgb(190, 133, 83);
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+/* FHeader css end */
+
+
+.slid-banner {
+    max-width: 1450px;
+    margin: auto;
+}
+
+.form-section {
+    max-width: 1450px;
+    margin: auto;
+    border-bottom: 5px solid #BE8553;
+}
+
+.form-width {
+    width: 250px;
+    height: 60px;
+    border-radius: 3px;
+    padding: 20px 15px;
+}
+
+.form-width:focus {
+    outline: #BE8553;
+
+}
+
+.form-btn {
+    background-color: #BE8553;
+    color: white;
+    padding: 20px 18px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+}
+
+.form-btn:hover {
+    background-color: white;
+    border: 1px solid #BE8553;
+    outline: 1px solid #32343B;
+    transition: all 1s;
+    color: #BE8553;
+    font-weight: bold;
+
+}
+
+.about-section {
+    max-width: 1450px;
+    margin: auto;
+    border: 1px solid red;
+
+}
+
+.text-about {
+    color: #BE8553;
+    font-size: 15px;
+}
+
+.text-about-underline {
+    width: 100px;
+    height: 1px;
+    background-color: #BE8553;
+}
+
+.window-btn {
+    position: fixed;
+    right: 0;
+    top: 300px;
+    background-color: #BE8553;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    transform: rotate(90deg);
+    z-index: 999;
+}
+
+.count-section {
+    width: 1100px;
+    background-color: #F4EFEB;
+    top: 1089px;
+    left: 416px;
+}
+
+.count-icon {
+    background-color: white;
+    width: 80px;
+    height: 80px;
+}
+
+.why-us {
+    background-image: url('/images/whyashapurna-bg.webp');
+    height: 500px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.icon-border {
+    width: 100px;
+    height: 2px;
+    background-color: #BE8553;
+    display: block;
+}
+
+.p-whyus-box {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.box-border-b {
+    border-bottom: 5px solid #BE8553;
+}
+
+.box-border-b {
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.box-border-b:hover {
+    background-color: #32343B;
+}
+
+.box-color {
+    background-color: white;
+}
+
+.box-color:hover {
+    background-color: #32343B;
+}
+
+.box-border-b:hover h3,
+.box-border-b:hover p {
+    color: white !important;
+}
+
+.box-btn {
+    color: #BE8553;
+}
+
+.bg-our-work {
+    background-color: #F4EFEB;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    padding: 100px;
+}
+
+.text-original {
+    color: #BE8553;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.text-original-2 {
+    font-size: 16px;
+    color: #32343B;
+}
+
+.btn-our-work {
+    background-color: #BE8553;
+    color: white;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.overview {
+    background-image: url('/images/whyashapurna-bg.webp');
+    height: 450px;
+    margin-bottom: 200px;
+    
+}
+
+.overview-section {
+    background-color: white;
+
+}
+
+.overview-btn {
+    top: 7%;
+    right: 20px;
+}
+
+.overview-btn button {
+    background-color: #062F43;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+
+}
+
+.overview-hover {
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    left: 5%;
+    bottom: -20%;
+
+}
+.booking-btn2{
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    background-color: #062F43;
+    color: white;
+}
+
+/* Footer css start */
+footer {
+    background: #32343B;
+    padding: 60px 0px;
+}
+
+.footer-size {
+    max-width: 1440;
+    margin: auto;
+}
+
+.f-icon {
+    background-color: #32343B;
+}
+
+.usefull-bb {
+    width: 74px;
+    height: 3px;
+    background: rgb(190, 133, 83);
+}
+
+.usefull-br {
+    width: 74px;
+    height: 1px;
+    background: #314B58;
+}
+
+.custom-border-end {
+    border-right: 1px solid #314B58;
+}
+
+.f-bb {
+    border-bottom: 1px solid #314B58;
+}
+
+.text-gray {
+    color: #cccc;
+    font-size: 17px;
+    font-weight: 200;
+}
+
+.text-gray:hover {
+    color: rgb(190, 133, 83);
+}
+
+.circle-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+}
+
+.circle-icon:hover {
+    background: rgb(190, 133, 83);
+}
+
+.footer-2-c {
+    background-color: #F4EFEB;
+}
+
+.footer2nd-border {
+    max-width: 800px;
+    margin: auto;
+    border-bottom: 1px solid #32343B;
+    height: 0;
+}
+
+.footer3-bg {
+    background-color: #E8DDD5;
+
+}
+
+/* Footer css end */
