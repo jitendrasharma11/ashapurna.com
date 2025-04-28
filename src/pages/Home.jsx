@@ -6,13 +6,14 @@ import AboutSection from './Component/Aboutsection';
 import WhyUs from './Component/WhyUs';
 import OurWork from './Component/OurWork';
 import ProjectOverview from './Component/ProjectOverview';
+import { RxCross1 } from "react-icons/rx";
+import Testimonial from './Component/Testimonial';
+import Mediasection from './Component/Mediasection';
 
 
 export default function Home() {
-  const [showModal, setShowModal] = useState(false);
 
-  const handleClose = () => setShowModal(false);
-  const handleShow = () => setShowModal(true);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <section className='container-fluid p-0'>
@@ -49,68 +50,79 @@ export default function Home() {
       </section>
 
       {/* Enquire Button */}
-      <button className='window-btn' onClick={handleShow}>
+      <button className='window-btn' onClick={()=>{
+        setShowModal(!showModal)
+      }} >
         ENQUIRE
       </button>
 
       {/* Modal Form */}
-      <Modal show={showModal} onHide={handleClose} centered>
-        <Modal.Body className='d-flex container'>
-          <div>
-            <img src="images/360_F_762684605_iNXUXTV1gnWma7v4DJdPHnPxgsEWCPIf.jpg" className='img-fluid' alt="" />
+      <section className={`model ${ showModal ? 'showmodelcss' : '' } `}>
+        <div className='row '>
+          <div className='col-6'>
+            <img src="images/pop-image.jpg" className='img-fluid object-fit-cover w-100 h-100' alt="" />
           </div>
-          <div>
-            <Modal.Header closeButton>
-            </Modal.Header>
-            <Modal.Title className="fw-bold">Enquire Now</Modal.Title>
-            <p className="text-muted mb-4">
-              Feel free to connect with us. We will contact with you shortly.
-            </p>
-
-            <Form>
-              <Form.Group className="mb-3" controlId="formName">
-                <Form.Label>Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter your name" />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="Enter your email" />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formPhone">
-                <Form.Label>Phone</Form.Label>
-                <Form.Control type="tel" placeholder="Enter phone number" />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formProperty">
-                <Form.Label>Select Property</Form.Label>
-                <Form.Select>
-                  <option>Select Property</option>
-                  <option>Ashapurna NRI</option>
-                  <option>Ashapurna Township</option>
-                  <option>Ashapurna Heights</option>
-                </Form.Select>
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formQuery">
-                <Form.Label>Explain Your Query</Form.Label>
-                <Form.Control as="textarea" rows={3} placeholder="Type your message here" />
-              </Form.Group>
-
-              <div className="text-center">
-                <Button variant="primary" className="px-4">
-                  SUBMIT
-                </Button>
-              </div>
-            </Form>
+          <div className='col-6 px-4 py-2'>
+            <div className='d-flex justify-content-between cursor-pointer'>
+              <h3>Enquire Now</h3>
+              <RxCross1 className='fw-bold fs-5 cursor-pointer' onClick={()=>{
+                setShowModal(false)
+              }} />
+            </div>
+            <p>Feel free to connect with us. We will contact with you shortly.</p>
+            
+              <Form  style={{ maxWidth: "600px", margin: "auto" }}>
+                <Row className="g-3">
+                  <Col md={6}>
+                    <Form.Group controlId="formName">
+                      <Form.Control type="text" placeholder="Name" />
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group controlId="formEmail">
+                      <Form.Control type="email" placeholder="Email" />
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group controlId="formPhone">
+                      <Form.Control type="text" placeholder="Phone" />
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group controlId="formSelectProperty">
+                      <Form.Select>
+                        <option>Select Property</option>
+                        <option value="1">Property 1</option>
+                        <option value="2">Property 2</option>
+                      </Form.Select>
+                    </Form.Group>
+                  </Col>
+                  <Col md={12}>
+                    <Form.Group controlId="formQuery">
+                      <Form.Control as="textarea" rows={4} placeholder="Explain Your Query" />
+                    </Form.Group>
+                  </Col>
+                  <Col md={12} className="text-center">
+                    <Button
+                      type="submit"
+                      className="px-4 py-2"
+                      style={{ backgroundColor: "#b97a45", borderColor: "#b97a45" }}
+                    >
+                      SUBMIT
+                    </Button>
+                  </Col>
+                </Row>
+              </Form>
+          
           </div>
-        </Modal.Body>
-      </Modal>
-      <AboutSection/>
-      <WhyUs/>
-      <OurWork/>
-      <ProjectOverview/>
+        </div>
+      </section>
+      <AboutSection />
+      <WhyUs />
+      <OurWork />
+      <ProjectOverview />
+      <Testimonial/>
+      <Mediasection/>
     </section>
   );
 }

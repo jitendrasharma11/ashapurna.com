@@ -74,7 +74,7 @@
 
 .window-btn {
     position: fixed;
-    right: 0;
+    right: -02%;
     top: 300px;
     background-color: #BE8553;
     color: white;
@@ -82,13 +82,15 @@
     padding: 10px 15px;
     border: none;
     transform: rotate(90deg);
-    z-index: 999;
+    z-index: 80;
+    transition: 2s;
 }
+
 
 .count-section {
     width: 1100px;
     background-color: #F4EFEB;
-    top: 1089px;
+    top: 1117px;
     left: 416px;
 }
 
@@ -178,7 +180,7 @@
     background-image: url('/images/whyashapurna-bg.webp');
     height: 450px;
     margin-bottom: 200px;
-    
+
 }
 
 .overview-section {
@@ -200,23 +202,70 @@
     font-size: 14px;
 
 }
-
+.fixed-image-height {
+    height: 250px !important; 
+    object-fit: cover;
+    width: 100%;
+  }
 .overview-hover {
-    max-width: 400px;
+    width: 390px !important;
     background-color: white;
     padding: 20px;
     left: 5%;
     bottom: -20%;
+    transition: 2s !important;
 
 }
-.booking-btn2{
+.bg-btn-red{
+    background-color: #FF5722 !important;
+}
+
+.overview-hover:hover .hidden-div {
+    display: block !important;
+    display: flex !important;
+}
+
+.booking-btn2 {
     padding: 5px 10px;
-    color: white;
+    color: red;
     border: none;
     background-color: #062F43;
     color: white;
+    z-index: 99;
+
 }
 
+.model {
+    width: 1000px;
+    margin: auto;
+    box-sizing: 0px 0px 10px 2px #ccc;
+    background-color: white;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: -50%;
+    z-index: 999;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.showmodelcss{
+    top: 50%;
+}
+.testimonial-btn{
+    background-color: #BE8553;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    border: 1px solid #BE8553;
+}
+.testimonial-btn:hover{
+    background-color: transparent;
+    color: #BE8553;
+    border: 1px solid #BE8553;
+}
+.icon-color{
+    color: #BE8553;
+}
 /* Footer css start */
 footer {
     background: #32343B;
