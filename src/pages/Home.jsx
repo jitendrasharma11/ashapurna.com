@@ -6,14 +6,12 @@ import AboutSection from './Component/Aboutsection';
 import WhyUs from './Component/WhyUs';
 import OurWork from './Component/OurWork';
 import ProjectOverview from './Component/ProjectOverview';
-import { RxCross1 } from "react-icons/rx";
 import Testimonial from './Component/Testimonial';
 import Mediasection from './Component/Mediasection';
 
 
 export default function Home() {
 
-  const [showModal, setShowModal] = useState(false);
 
   return (
     <section className='container-fluid p-0'>
@@ -47,75 +45,6 @@ export default function Home() {
           <input type="text" placeholder='Explain Your Query' className='form-width ' />
           <button className='form-btn'>Submit</button>
         </form>
-      </section>
-
-      {/* Enquire Button */}
-      <button className='window-btn' onClick={()=>{
-        setShowModal(!showModal)
-      }} >
-        ENQUIRE
-      </button>
-
-      {/* Modal Form */}
-      <section className={`model ${ showModal ? 'showmodelcss' : '' } `}>
-        <div className='row '>
-          <div className='col-6'>
-            <img src="images/pop-image.jpg" className='img-fluid object-fit-cover w-100 h-100' alt="" />
-          </div>
-          <div className='col-6 px-4 py-2'>
-            <div className='d-flex justify-content-between cursor-pointer'>
-              <h3>Enquire Now</h3>
-              <RxCross1 className='fw-bold fs-5 cursor-pointer' onClick={()=>{
-                setShowModal(false)
-              }} />
-            </div>
-            <p>Feel free to connect with us. We will contact with you shortly.</p>
-            
-              <Form  style={{ maxWidth: "600px", margin: "auto" }}>
-                <Row className="g-3">
-                  <Col md={6}>
-                    <Form.Group controlId="formName">
-                      <Form.Control type="text" placeholder="Name" />
-                    </Form.Group>
-                  </Col>
-                  <Col md={6}>
-                    <Form.Group controlId="formEmail">
-                      <Form.Control type="email" placeholder="Email" />
-                    </Form.Group>
-                  </Col>
-                  <Col md={6}>
-                    <Form.Group controlId="formPhone">
-                      <Form.Control type="text" placeholder="Phone" />
-                    </Form.Group>
-                  </Col>
-                  <Col md={6}>
-                    <Form.Group controlId="formSelectProperty">
-                      <Form.Select>
-                        <option>Select Property</option>
-                        <option value="1">Property 1</option>
-                        <option value="2">Property 2</option>
-                      </Form.Select>
-                    </Form.Group>
-                  </Col>
-                  <Col md={12}>
-                    <Form.Group controlId="formQuery">
-                      <Form.Control as="textarea" rows={4} placeholder="Explain Your Query" />
-                    </Form.Group>
-                  </Col>
-                  <Col md={12} className="text-center">
-                    <Button
-                      type="submit"
-                      className="px-4 py-2"
-                      style={{ backgroundColor: "#b97a45", borderColor: "#b97a45" }}
-                    >
-                      SUBMIT
-                    </Button>
-                  </Col>
-                </Row>
-              </Form>
-          
-          </div>
-        </div>
       </section>
       <AboutSection />
       <WhyUs />
